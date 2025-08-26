@@ -4,12 +4,27 @@ Shards is a small little utility library for aspiring matchmakers who want to be
 too much faff. This library is used in [Basketball: Zero](https://www.roblox.com/games/130739873848552/-)'s ranked
 gamemode to a great degree of success.
 
+Now, a budding developer like yourself must be thinking "what is a shard?" Well, shards are a small set of country groups
+that roughly match up to where Roblox's server infrastructure is located. When you get a shard for a player, you can feed
+that into a matchmaking system to pair them up with players in the same general region, meaning that players get better
+ping and experience. This is ideal for competitive or ping-dependent games, but is also just good generally for a smoother
+experience for everyone. This also means that you will (in the best conditions) create reserved servers in the best region
+for all of the players on a match.
+
+N.B.: Shards does nothing by itself to improve the matchmaking experience, and this library is just a utility wrapper
+around the actual data to make it easier to access. It is up to you to utilize the data to your advantage and plug it in
+to your systems.
+
+Also yes, I stole the 'shard' terminology from Valorant.
+
 ## Documentation
 
 ```lua
 local Shards = require(...)
 
--- load the latest shard data from the default source
+-- load the latest shard data from the default source, you should ideally do this once but you can do it as many times
+-- as you like
+--
 -- NOTE: if this does fail, it will use the version of the data built in to your version of the library instead
 Shards.loadRemoteShardData()
 
