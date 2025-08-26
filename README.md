@@ -1,7 +1,7 @@
 <p align="center">
 	<picture>
-		<source media="(prefers-color-scheme: dark)" srcset=".github/shard-logo-dark.png">
-		<img src=".github/shard-logo-light.png" height="200">
+		<source media="(prefers-color-scheme: dark)" srcset="repo/shard-logo-dark.png">
+		<img src="repo/shard-logo-light.png" height="200">
 	</picture>
 </p>
 
