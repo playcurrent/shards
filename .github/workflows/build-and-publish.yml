@@ -27,7 +27,7 @@ jobs:
           name: Shards.rbxm
           path: Shards.rbxm
 
-      - name: Create Release
+      - name: Create release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
