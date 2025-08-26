@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    tags:
+      - v*
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    name: Build and Publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: CompeyDev/setup-rokit@v0.1.2
+
+      - name: Build
+        run: rojo build ./default.project.json --output Shards.rbxm
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Shards.rbxm
+          path: Shards.rbxm
+
+      - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            --repo="$GITHUB_REPOSITORY" \
+            --title="${{ github.ref_name }}" \
+            --generate-notes \
+            ./Shards.rbxm
