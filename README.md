@@ -4,6 +4,39 @@ Shards is a small little utility library for aspiring matchmakers who want to be
 too much faff. This library is used in [Basketball: Zero](https://www.roblox.com/games/130739873848552/-)'s ranked
 gamemode to a great degree of success.
 
+## Documentation
+
+```lua
+local Shards = require(...)
+
+-- load the latest shard data from the default source
+-- NOTE: if this does fail, it will use the version of the data built in to your version of the library instead
+Shards.loadRemoteShardData()
+
+-- if you want to load data from a custom source, you can do that too:
+Shards.loadRemoteShardData("https://example.org/shards.json")
+
+local shardId = Shards.getShardForPlayer(game.Players.lewisakura)
+-- if you have a specific country code already (ex. trying to get the server's shard ID instead), you can do that too:
+Shards.getShardForCountry("US")
+
+-- the shardId is a numerical ID representing the shard, so to get a display name, you can use getShardName:
+print(shardId) -- 1
+print(Shards.getShardName(shardId)) -- North America
+```
+
+## Installation
+
+### Wally Package
+
+```toml
+Shards = "playcurrent/shards@0.1.0"
+```
+
+### RBXM Module
+
+Pop over to the [releases](https://github.com/playcurrent/shards/releases)!
+
 ## FAQ
 
 ### Why a package?
