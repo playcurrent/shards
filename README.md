@@ -5,22 +5,19 @@
 	</picture>
 </p>
 
-Shards is a small little utility library for aspiring matchmakers who want to be able to optimize player latency without
-too much faff. This library is used in [Basketball: Zero](https://www.roblox.com/games/130739873848552/-)'s ranked
-gamemode to a great degree of success.
+Shards are a set of country groups that either roughly match up to where Roblox's server infrastructure is located or
+help to group up countries that, whilst may connect to a certain server region, don't geographically exist there (for
+instance, African countries tend to connect to Europe). This package helps faciliate the use of shards in games by
+providing a thin API wrapper around the shard data and giving a mechanism to automatically fetch updated shard lists.
 
-Now, a budding developer like yourself must be thinking "what is a shard?" Well, shards are a small set of country groups
-that roughly match up to where Roblox's server infrastructure is located. When you get a shard for a player, you can feed
-that into a matchmaking system to pair them up with players in the same general region, meaning that players get better
-ping and experience. This is ideal for competitive or ping-dependent games, but is also just good generally for a smoother
-experience for everyone. This also means that you will (in the best conditions) create reserved servers in the best region
-for all of the players on a match.
+When you get a shard for a player, you can feed that into a matchmaking system to pair them up with players in the same
+general region, meaning that players get better ping and experience. This is ideal for competitive or ping-dependent games,
+but is also just good generally for a smoother experience for everyone. This also means that you will (in the best
+conditions) create reserved servers in the best region for all of the players on a match.
 
-N.B.: Shards does nothing by itself to improve the matchmaking experience, and this library is just a utility wrapper
-around the actual data to make it easier to access. It is up to you to utilize the data to your advantage and plug it in
-to your systems.
-
-Also yes, I stole the 'shard' terminology from Valorant.
+In the spirit of eating our own dog food, this library is used in [Basketball: Zero](https://www.roblox.com/games/130739873848552/-)
+for ranked matchmaking, and has been working extremely well, improving latency issues and matching people with others in
+their own regions.
 
 ## Documentation
 
@@ -74,7 +71,4 @@ A lot of matchmaking systems actually have quite a hard time with strings. For i
 (funnily enough, what we use at BB:Z) really does not play nice with string equality in expansion rules, so a numerical
 ID is provided as an alternative.
 
-<small>
-	Logo modified from Crystal Shard, under CC-BY-SA-4.0 by
-	<a href="https://dribbble.com/Chanut-is-Industries">Chanut is Industries</a>
-</small>
+> Logo modified from Crystal Shard, under CC-BY-SA-4.0 by [Chanut is Industries](https://dribbble.com/Chanut-is-Industries)
