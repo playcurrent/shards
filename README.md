@@ -22,20 +22,23 @@ Also yes, I stole the 'shard' terminology from Valorant.
 ```lua
 local Shards = require(...)
 
--- load the latest shard data from the default source, you should ideally do this once but you can do it as many times
--- as you like
+-- load the latest shard data from the default source, you should ideally do this once but
+-- you can do it as many times as you like
 --
--- NOTE: if this does fail, it will use the version of the data built in to your version of the library instead
+-- NOTE: if this does fail, it will use the version of the data built in to your version of
+-- the library instead
 Shards.loadRemoteShardData()
 
 -- if you want to load data from a custom source, you can do that too:
 Shards.loadRemoteShardData("https://example.org/shards.json")
 
 local shardId = Shards.getShardForPlayer(game.Players.lewisakura)
--- if you have a specific country code already (ex. trying to get the server's shard ID instead), you can do that too:
+-- if you have a specific country code already (ex. trying to get the server's shard ID
+-- instead), you can do that too:
 Shards.getShardForCountry("US")
 
--- the shardId is a numerical ID representing the shard, so to get a display name, you can use getShardName:
+-- the shardId is a numerical ID representing the shard, so to get a display name, you can
+-- use getShardName:
 print(shardId) -- 1
 print(Shards.getShardName(shardId)) -- North America
 ```
