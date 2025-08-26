@@ -1,4 +1,9 @@
-# Shards
+<p align="center">
+	<picture>
+		<source media="(prefers-color-scheme: dark)" srcset=".github/shard-logo-dark.png">
+		<img src=".github/shard-logo-light.png" height="200">
+	</picture>
+</p>
 
 Shards is a small little utility library for aspiring matchmakers who want to be able to optimize player latency without
 too much faff. This library is used in [Basketball: Zero](https://www.roblox.com/games/130739873848552/-)'s ranked
@@ -68,3 +73,8 @@ a game update. Plus, it provides a small little API for people to use to make it
 A lot of matchmaking systems actually have quite a hard time with strings. For instance, Amazon's GameLift FlexMatch
 (funnily enough, what we use at BB:Z) really does not play nice with string equality in expansion rules, so a numerical
 ID is provided as an alternative.
+
+<small>
+	Logo modified from Crystal Shard, under CC-BY-SA-4.0 by
+	<a href="https://dribbble.com/Chanut-is-Industries">Chanut is Industries</a>
+</small>
