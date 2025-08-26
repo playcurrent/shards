@@ -1,0 +1,9 @@
+{
+    "name": "Shards",
+    "tree": {
+        "$path": "lib",
+        "shardData": {
+            "$path": "data/shards.json"
+        }
+    }
+}

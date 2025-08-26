@@ -1,0 +1,21 @@
+{
+    "name": "Shards-test",
+    "tree": {
+        "$className": "DataModel",
+
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+
+            "Packages": {
+                "$className": "Folder",
+
+                "Shards": {
+                    "$path": "lib",
+                    "shardData": {
+                        "$path": "data/shards.json"
+                    }
+                }
+            }
+        }
+    }
+}
