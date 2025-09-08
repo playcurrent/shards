@@ -33,15 +33,13 @@
 			"EC",
 			"GY",
 			"SR",
-			"GF",
-
-			"BR"
+			"GF"
 		]
 	},
 	{
 		"id": 2,
 		"displayName": "Brazil",
-		"countries": []
+		"countries": ["BR"]
 	},
 	{
 		"id": 3,
